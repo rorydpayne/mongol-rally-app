@@ -1,0 +1,23 @@
+.md-sidenav-left {
+    background-image: url("/assets/images/jpg/sidenav_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    span.logo {
+        background-image: url("/assets/images/png/logo.png");
+        background-repeat: no-repeat;
+        display: block;
+        width: 80%;
+        margin: 10%;
+        height:250px;
+    }
+
+    md-list {
+        md-item-content {
+            color: getThemeColor('theme-white');
+        }
+        .icon-wrapper {
+            margin-right: 10px;
+        }
+    }
+}

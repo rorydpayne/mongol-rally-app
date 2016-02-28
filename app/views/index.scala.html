@@ -1,0 +1,65 @@
+@()<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>A Fistful of Tugriks</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <link rel="stylesheet" href="/assets/bower_components/angular-material/angular-material.css">
+        <link rel="stylesheet" media="screen" href='@routes.Assets.versioned("sass/main.css")'>
+
+        <script src='@routes.Assets.versioned("bower_components/jquery/dist/jquery.min.js")'></script>
+        <script src='@routes.Assets.versioned("bower_components/jquery-ui/jquery-ui.min.js")'></script>
+        <script src='@routes.Assets.versioned("bower_components/angular/angular.min.js")'></script>
+        <script src='@routes.Assets.versioned("bower_components/angular-route/angular-route.min.js")'></script>
+        <script src='@routes.Assets.versioned("bower_components/angular-animate/angular-animate.min.js")'></script>
+        <script src='@routes.Assets.versioned("bower_components/angular-aria/angular-aria.min.js")'></script>
+        <script src='@routes.Assets.versioned("bower_components/angular-messages/angular-messages.min.js")'></script>
+        <script src='@routes.Assets.versioned("bower_components/angular-material/angular-material.min.js")'></script>
+
+        <script src='@routes.Assets.versioned("javascripts/app.js")'></script>
+        <script src='@routes.Assets.versioned("javascripts/blog/ui/home-ctrl.js")'></script>
+        <script src='@routes.Assets.versioned("javascripts/blog/ui/app-ctrl.js")'></script>
+        <script src='@routes.Assets.versioned("javascripts/blog/ui/left-ctrl.js")'></script>
+        <script src='@routes.Assets.versioned("javascripts/blog/ui/right-ctrl.js")'></script>
+
+    </head>
+    <body>
+
+    <div ng-controller="AppCtrl" layout="column" ng-cloak class="site-wrapper">
+        <section layout="row" flex>
+            <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ng-include="'/assets/partials/leftnav.html'">
+            </md-sidenav>
+            <div layout="column" tabindex="-1" role="main" flex>
+                <div ng-include="'/assets/partials/toolbar.html'"></div>
+                <md-content flex layout-padding>
+                    <div ng-view></div>
+                    <div flex></div>
+                </md-content>
+            </div>
+            <div ng-include="'/assets/partials/rightnav.html'"></div>
+        </section>
+    </div>
+
+        <!--<div class="site-wrapper" ng-controller="AppCtrl">-->
+            <!--<section layout="row" flex>-->
+                <!--<div ng-include="'/assets/partials/leftnav.html'"></div>-->
+                <!--<div layout="column" tabindex="-1" role="main" flex>-->
+                    <!--<div ng-include="'/assets/partials/toolbar.html'"></div>-->
+                    <!--<section layout="row" flex>-->
+                        <!--<md-content flex layout-padding>-->
+                            <!--<div ng-view></div>-->
+                            <!--<div flex></div>-->
+                        <!--</md-content>-->
+                        <!--<div ng-include="'/assets/partials/rightnav.html'"></div>-->
+                    <!--</section>-->
+                <!--</div>-->
+            <!--</section>-->
+        <!--</div>-->
+    </body>
+</html>
+
+
+
