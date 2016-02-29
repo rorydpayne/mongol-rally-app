@@ -1,85 +1,85 @@
 <md-toolbar class="transparent square">
     <span class="logo square"></span>
 </md-toolbar>
-<md-content class="transparent" layout-padding ng-controller="LeftCtrl">
-    <md-list role="list">
-        <md-item role="listitem">
-            <a href="/">
-                <md-item-content md-ink-ripple layout="row" layout-align="start center">
-                    <div class="inset">
-                        <i class="material-icons">home</i>
-                    </div>
-                    <div class="inset">
-                        <p class="md-subhead">home</p>
-                    </div>
-                    <div class="md-ripple-container"></div>
-                </md-item-content>
-            </a>
-        </md-item>
-        <md-item role="listitem">
-            <a href="/">
-                <md-item-content md-ink-ripple layout="row" layout-align="start center">
-                    <div class="inset">
-                        <i class="material-icons">people</i>
-                    </div>
-                    <div class="inset">
-                        <p class="md-subhead">team</p>
-                    </div>
-                    <div class="md-ripple-container"></div>
-                </md-item-content>
-            </a>
-        </md-item>
-        <md-item role="listitem">
-            <a href="/">
-                <md-item-content md-ink-ripple layout="row" layout-align="start center">
-                    <div class="inset">
-                        <i class="material-icons">map</i>
-                    </div>
-                    <div class="inset">
-                        <p class="md-subhead">route</p>
-                    </div>
-                    <div class="md-ripple-container"></div>
-                </md-item-content>
-            </a>
-        </md-item>
-        <md-item role="listitem">
-            <a href="/">
-                <md-item-content md-ink-ripple layout="row" layout-align="start center">
-                    <div class="inset">
-                        <i class="material-icons">favorite</i>
-                    </div>
-                    <div class="inset">
-                        <p class="md-subhead">charity</p>
-                    </div>
-                    <div class="md-ripple-container"></div>
-                </md-item-content>
-            </a>
-        </md-item>
-        <md-item role="listitem">
-            <a href="/">
-                <md-item-content md-ink-ripple layout="row" layout-align="start center">
-                    <div class="inset">
-                        <i class="material-icons">comment</i>
-                    </div>
-                    <div class="inset">
-                        <p class="md-subhead">blog</p>
-                    </div>
-                    <div class="md-ripple-container"></div>
-                </md-item-content>
-            </a>
-        </md-item>
-        <md-item role="listitem">
-            <a href="/">
-                <md-item-content md-ink-ripple layout="row" layout-align="start center">
-                    <div class="inset">
-                        <i class="material-icons">more horiz</i>
-                    </div>
-                    <div class="inset">
-                        <p class="md-subhead">for a few tugriks more</p>
-                    </div>
-                    <div class="md-ripple-container"></div>
-                </md-item-content>
-            </a>
-        </md-item>
-    </md-list>
-</md-content>
+<md-divider></md-divider>
+<md-list ng-controller="LeftCtrl">
+    <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/'}" ng-click="redirect('/')">
+        <a>
+            <md-item-content layout="row" layout-align="start center">
+                <div class="inset">
+                    <i class="material-icons">home</i>
+                </div>
+                <div class="inset">
+                    <span class="md-subhead">home</span>
+                </div>
+            </md-item-content>
+        </a>
+    </md-list-item>
+    <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/team'}" ng-click="redirect('/team')">
+        <a>
+            <md-item-content layout="row" layout-align="start center">
+                <div class="inset">
+                    <i class="material-icons">people</i>
+                </div>
+                <div class="inset">
+                    <span class="md-subhead">team</span>
+                </div>
+            </md-item-content>
+        </a>
+    </md-list-item>
+    <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/route'}" ng-click="redirect('/route')">
+        <a>
+            <md-item-content layout="row" layout-align="start center">
+                <div class="inset">
+                    <i class="material-icons">map</i>
+                </div>
+                <div class="inset">
+                    <span class="md-subhead">route</span>
+                </div>
+            </md-item-content>
+        </a>
+    </md-list-item>
+    <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/charity'}" ng-click="redirect('/charity')">
+        <a>
+            <md-item-content layout="row" layout-align="start center">
+                <div class="inset">
+                    <i class="material-icons">favorite</i>
+                </div>
+                <div class="inset">
+                    <span class="md-subhead">charity</span>
+                </div>
+            </md-item-content>
+        </a>
+    </md-list-item>
+    <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/blog'}" ng-click="redirect('/blog')">
+        <a>
+            <md-item-content layout="row" layout-align="start center">
+                <div class="inset">
+                    <i class="material-icons">comment</i>
+                </div>
+                <div class="inset">
+                    <span class="md-subhead">blog</span>
+                </div>
+            </md-item-content>
+        </a>
+    </md-list-item>
+    <md-list-item md-ink-ripple class="md-clickable">
+        <a>
+            <md-item-content layout="row" layout-align="start center">
+                <div class="inset">
+                    <i class="material-icons">more_horiz</i>
+                </div>
+                <div class="inset">
+                    <span class="md-subhead">for a few tugriks more</span>
+                </div>
+            </md-item-content>
+        </a>
+    </md-list-item>
+</md-list>
+
+<ul>
+    <li><i class="material-icons">instagram</i></li>
+    <li><i class="material-icons">facebook</i></li>
+    <li><i class="material-icons">twitter</i></li>
+    <li><i class="material-icons">youtube</i></li>
+</ul>

@@ -6,18 +6,32 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
             $httpProvider.defaults.useXDomain = true;
             $httpProvider.defaults.timeout = 60000;
 
-            $routeProvider.when('/', {
+            $routeProvider.when('', {
                 templateUrl: '/assets/partials/home.html',
                 controller: 'HomeCtrl'
             });
+            $routeProvider.when('/team', {
+                templateUrl: '/assets/partials/home.html',
+                controller: 'HomeCtrl'
+            });
+            $routeProvider.when('/route', {
+                templateUrl: '/assets/partials/home.html',
+                controller: 'HomeCtrl'
+            });
+            $routeProvider.when('/charity', {
+                templateUrl: '/assets/partials/home.html',
+                controller: 'HomeCtrl'
+            });
+            $routeProvider.when('/blog', {
+                templateUrl: '/assets/partials/home.html',
+                controller: 'HomeCtrl'
+            });
+
             $routeProvider.otherwise({
                 redirectTo: '/'
             });
 
-            $locationProvider.html5Mode({
-                enables: true,
-                requireBase: false
-            });
+            $locationProvider.html5Mode(true);
 
 
         }])
@@ -25,6 +39,11 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
         $mdThemingProvider.theme('default')
             .primaryPalette('cyan')
             .accentPalette('pink');
+    }])
+    .run(['$rootScope', '$location', function($rootScope, $location) {
+        $rootScope.$on("$routeChangeStart", function(event, next, current) {
+            $rootScope.currentPath = $location.path();
+        });
     }]);
 
 var blogDomainModule = angular.module('blogDomain', []);

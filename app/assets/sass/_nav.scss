@@ -13,6 +13,9 @@
     }
 
     md-list {
+        md-list-item.active {
+            background: getThemeColor('theme-primary');
+        }
         md-item-content {
             color: getThemeColor('theme-white');
         }
