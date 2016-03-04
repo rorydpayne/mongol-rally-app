@@ -6,7 +6,7 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
             $httpProvider.defaults.useXDomain = true;
             $httpProvider.defaults.timeout = 60000;
 
-            $routeProvider.when('', {
+            $routeProvider.when('/', {
                 templateUrl: '/assets/partials/home.html',
                 controller: 'HomeCtrl'
             });
