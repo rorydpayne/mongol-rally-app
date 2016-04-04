@@ -15,15 +15,15 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
                 controller: 'HomeCtrl'
             });
             $routeProvider.when('/route', {
-                templateUrl: '/assets/partials/home.html',
+                templateUrl: '/assets/partials/route.html',
                 controller: 'HomeCtrl'
             });
             $routeProvider.when('/charity', {
-                templateUrl: '/assets/partials/home.html',
+                templateUrl: '/assets/partials/charity.html',
                 controller: 'HomeCtrl'
             });
-            $routeProvider.when('/blog', {
-                templateUrl: '/assets/partials/home.html',
+            $routeProvider.when('/kit', {
+                templateUrl: '/assets/partials/kit.html',
                 controller: 'HomeCtrl'
             });
 

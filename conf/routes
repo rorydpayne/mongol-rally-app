@@ -9,6 +9,9 @@ GET     /route                      controllers.Application.index()
 GET     /charity                    controllers.Application.index()
 GET     /blog                       controllers.Application.index()
 
+# Resources
+GET     /fundraising                controllers.Application.getFundraisingSummary()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 

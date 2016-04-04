@@ -1,0 +1,15 @@
+.fixed-fab-container {
+    position: fixed;
+    height: 70px;
+    z-index: 1;
+    text-align: right;
+    margin: 20px;
+
+    &--top {
+        top: 0;
+    }
+    &--right {
+        right: 0;
+    }
+
+}

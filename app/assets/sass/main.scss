@@ -1,4 +1,5 @@
 @import "color";
+@import "vars";
 
 html {
     height: 100%;
@@ -24,4 +25,6 @@ a {
 }
 
 @import "nav";
+@import "layout";
+@import "toolbar";
 
