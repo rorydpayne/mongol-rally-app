@@ -18,7 +18,7 @@ public class Application extends Controller {
         return ok(index.render());
     }
 
-    public static F.Promise<Result> getFundraisingSummary() {
+    public F.Promise<Result> getFundraisingSummary() {
         return fundraisingService.retrieveFundraisingSummary().map(Results::ok);
     }
 

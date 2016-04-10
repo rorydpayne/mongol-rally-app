@@ -16,7 +16,7 @@
         md-list-item.active {
             background: getThemeColor('theme-primary');
         }
-        md-item-content {
+        md-item-content, md-icon {
             color: getThemeColor('theme-white');
         }
         .icon-wrapper {

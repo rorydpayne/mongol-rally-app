@@ -20,10 +20,14 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
             });
             $routeProvider.when('/charity', {
                 templateUrl: '/assets/partials/charity.html',
-                controller: 'HomeCtrl'
+                controller: 'CharityCtrl'
             });
             $routeProvider.when('/kit', {
                 templateUrl: '/assets/partials/kit.html',
+                controller: 'HomeCtrl'
+            });
+            $routeProvider.when('/contact', {
+                templateUrl: '/assets/partials/contact.html',
                 controller: 'HomeCtrl'
             });
 

@@ -9,7 +9,7 @@
             <a>
                 <md-item-content layout="row" layout-align="start center">
                     <div class="inset">
-                        <i class="material-icons">home</i>
+                        <md-icon>home</md-icon>
                     </div>
                     <div class="inset">
                         <span class="md-subhead">home</span>
@@ -33,7 +33,7 @@
             <a>
                 <md-item-content layout="row" layout-align="start center">
                     <div class="inset">
-                        <i class="material-icons">map</i>
+                        <md-icon>map</md-icon>
                     </div>
                     <div class="inset">
                         <span class="md-subhead">route</span>
@@ -45,7 +45,7 @@
             <a>
                 <md-item-content layout="row" layout-align="start center">
                     <div class="inset">
-                        <i class="material-icons">comment</i>
+                        <md-icon>motorcycle</md-icon>
                     </div>
                     <div class="inset">
                         <span class="md-subhead">bikes & kit</span>
@@ -57,7 +57,7 @@
             <a>
                 <md-item-content layout="row" layout-align="start center">
                     <div class="inset">
-                        <i class="material-icons">favorite</i>
+                        <md-icon>favorite</md-icon>
                     </div>
                     <div class="inset">
                         <span class="md-subhead">charity</span>
@@ -65,18 +65,18 @@
                 </md-item-content>
             </a>
         </md-list-item>
-        <!--<md-list-item md-ink-ripple class="md-clickable">-->
-            <!--<a>-->
-                <!--<md-item-content layout="row" layout-align="start center">-->
-                    <!--<div class="inset">-->
-                        <!--<i class="material-icons">more_horiz</i>-->
-                    <!--</div>-->
-                    <!--<div class="inset">-->
-                        <!--<span class="md-subhead">for a few tugriks more</span>-->
-                    <!--</div>-->
-                <!--</md-item-content>-->
-            <!--</a>-->
-        <!--</md-list-item>-->
+        <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/contact'}" ng-click="redirect('/contact')">
+            <a>
+                <md-item-content layout="row" layout-align="start center">
+                    <div class="inset">
+                        <md-icon>message</md-icon>
+                    </div>
+                    <div class="inset">
+                        <span class="md-subhead">contact</span>
+                    </div>
+                </md-item-content>
+            </a>
+        </md-list-item>
     </md-list>
 
 

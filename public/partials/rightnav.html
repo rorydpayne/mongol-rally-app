@@ -1,13 +1,33 @@
 <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
     <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+        <h1 class="md-toolbar-tools">Contact</h1>
     </md-toolbar>
     <md-content ng-controller="RightCtrl" layout-padding>
         <form>
             <md-input-container>
-                <label for="testInput">Test input</label>
-                <input type="text" id="testInput"
-                       ng-model="data" md-autofocus>
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname"
+                       ng-model="fName" md-autofocus>
+            </md-input-container>
+            <md-input-container>
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname"
+                       ng-model="lName" md-autofocus>
+            </md-input-container>
+            <md-input-container>
+                <label for="email">Email</label>
+                <input type="email" id="email"
+                       ng-model="email" md-autofocus>
+            </md-input-container>
+            <md-input-container>
+                <label for="telephone">Telephone</label>
+                <input type="text" id="telephone"
+                       ng-model="tel" md-autofocus>
+            </md-input-container>
+            <md-input-container>
+                <label for="message">Message</label>
+                <textarea id="message" md-no-autogrow="true" rows="6"
+                       ng-model="msg" md-autofocus>
             </md-input-container>
         </form>
         <md-button ng-click="close()" class="md-primary">
