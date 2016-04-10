@@ -28,7 +28,7 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
             });
             $routeProvider.when('/contact', {
                 templateUrl: '/assets/partials/contact.html',
-                controller: 'HomeCtrl'
+                controller: 'ContactCtrl'
             });
 
             $routeProvider.otherwise({

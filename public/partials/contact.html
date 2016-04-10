@@ -6,51 +6,55 @@
             comments or would like more information, you can reach us using the form below.</p>
         <form name="contactForm">
             <md-input-container class="md-block">
-                <label>First name</label>
+                <label>First name *</label>
                 <md-icon>person</md-icon>
-                <input required  name="firstname" ng-model="project.firstname">
+                <input required  name="firstname" ng-model="formDetails.firstname" autofocus>
                 <div ng-messages="contactForm.firstname.$error">
-                    <div ng-message="required">Please let us know who you are</div>
+                    <div ng-message="required">Tell us what we should call you</div>
                 </div>
             </md-input-container>
             <md-input-container class="md-block">
-                <label>Last name</label>
+                <label>Last name *</label>
                 <md-icon>person</md-icon>
-                <input required  name="lastname" ng-model="project.lastname">
+                <input required name="lastname" ng-model="formDetails.lastname">
                 <div ng-messages="contactForm.lastname.$error">
-                    <div ng-message="required">Please let us know who you are</div>
+                    <div ng-message="required">Tell us what we should call you</div>
                 </div>
             </md-input-container>
             <md-input-container class="md-block">
-                <label>Company (optional)</label>
+                <label>Company name</label>
                 <md-icon>person</md-icon>
-                <input name="company" ng-model="project.company">
+                <input name="company" ng-model="formDetails.company">
             </md-input-container>
             <md-input-container class="md-block">
-                <label>Email</label>
+                <label>Email *</label>
                 <md-icon>email</md-icon>
-                <input required  name="email" ng-model="project.email" ng-pattern="/^.+\@.+\..+/">
+                <input required  name="email" ng-model="formDetails.email" ng-pattern="/^.+\@.+\..+/">
                 <div ng-messages="contactForm.email.$error">
-                    <div ng-message="required">Please tell us your email address so we can get back to you</div>
+                    <div ng-message="required">Tell us your email address so we can get back to you</div>
                     <div ng-message="pattern">Please enter a valid email address</div>
                 </div>
             </md-input-container>
             <md-input-container class="md-block">
-                <label>Telephone (optional)</label>
+                <label>Telephone</label>
                 <md-icon>phone</md-icon>
-                <input  name="phone" ng-model="project.phone" ng-pattern="/^[0-9,x,+]*$/">
+                <input  name="phone" ng-model="formDetails.phone" ng-pattern="/^[0-9,x,+]*$/">
                 <div ng-messages="contactForm.phone.$error">
                     <div ng-message="pattern">Please enter a valid telephone number</div>
                 </div>
             </md-input-container>
             <md-input-container class="md-block md-icon-left">
-                <label>Message</label>
+                <label>Message *</label>
                 <md-icon>message</md-icon>
-                <textarea required name="message" ng-model="project.msg"></textarea>
+                <textarea required name="message" ng-model="formDetails.msg"></textarea>
                 <div ng-messages="contactForm.message.$error">
-                    <div ng-message="required">Please let us know what you're interested in talking to us about</div>
+                    <div ng-message="required">What would you like to tell us about?</div>
                 </div>
             </md-input-container>
+
         </form>
+        <div class="button-wrapper button-wrapper--center button-wrapper--large">
+            <md-button ng-href="#" ng-click="send(formDetails)" class="md-raised md-accent">Send</md-button>
+        </div>
     </md-content>
 </section>

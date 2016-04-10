@@ -22,4 +22,8 @@ public class Application extends Controller {
         return fundraisingService.retrieveFundraisingSummary().map(Results::ok);
     }
 
+    public Result sendMessage() {
+        
+    }
+
 }
