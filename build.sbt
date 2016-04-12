@@ -12,6 +12,9 @@ libraryDependencies ++= Seq(
   javaWs
 )
 
+libraryDependencies += "org.apache.commons" % "commons-email" % "1.4"
+libraryDependencies += "com.typesafe.play" %% "play-mailer" % "4.0.0"
+
 // Play provides two styles of routers, one expects its actions to be injected, the
 // other, legacy style, accesses its actions statically.
 routesGenerator := InjectedRoutesGenerator

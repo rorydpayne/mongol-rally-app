@@ -8,7 +8,7 @@
             <md-input-container class="md-block">
                 <label>First name *</label>
                 <md-icon>person</md-icon>
-                <input required  name="firstname" ng-model="formDetails.firstname" autofocus>
+                <input required  name="firstname" ng-model="formDetails.firstName" autofocus>
                 <div ng-messages="contactForm.firstname.$error">
                     <div ng-message="required">Tell us what we should call you</div>
                 </div>
@@ -16,7 +16,7 @@
             <md-input-container class="md-block">
                 <label>Last name *</label>
                 <md-icon>person</md-icon>
-                <input required name="lastname" ng-model="formDetails.lastname">
+                <input required name="lastname" ng-model="formDetails.lastName">
                 <div ng-messages="contactForm.lastname.$error">
                     <div ng-message="required">Tell us what we should call you</div>
                 </div>
@@ -46,15 +46,14 @@
             <md-input-container class="md-block md-icon-left">
                 <label>Message *</label>
                 <md-icon>message</md-icon>
-                <textarea required name="message" ng-model="formDetails.msg"></textarea>
+                <textarea required name="message" ng-model="formDetails.message"></textarea>
                 <div ng-messages="contactForm.message.$error">
                     <div ng-message="required">What would you like to tell us about?</div>
                 </div>
             </md-input-container>
-
+            <div class="button-wrapper button-wrapper--center">
+                <md-button ng-href="#" ng-click="send(formDetails)" class="md-raised md-accent">Send</md-button>
+            </div>
         </form>
-        <div class="button-wrapper button-wrapper--center button-wrapper--large">
-            <md-button ng-href="#" ng-click="send(formDetails)" class="md-raised md-accent">Send</md-button>
-        </div>
     </md-content>
 </section>
