@@ -1,16 +1,52 @@
-blogUiModule.controller("ContactCtrl", ['$scope', '$http', function($scope, $http) {
+blogUiModule.controller("ContactCtrl", ['$scope', '$http', '$mdToast', function($scope, $http, $mdToast) {
 
-    $scope.send = function(formDetails) {
-        if (formDetails.firstName == null || formDetails.lastName == null || formDetails.email== null
-        || formDetails.message == null) {
+    $scope.formDetails = {};
+
+    $scope.send = function() {
+        if ($scope.formDetails.firstName == null || $scope.formDetails.firstName == "" ||
+         $scope.formDetails.lastName == null || $scope.formDetails.lastName == "" ||
+         $scope.formDetails.email == null || $scope.formDetails.email == "" || !$scope.contactForm.match(/^.+\@.+\..+/) ||
+        $scope.formDetails.message == null || $scope.formDetails.message == "" ||
+        !$scope.contactFrom.phone.match(/^[0-9,x,+]*$/)) {
+            $scope.contactForm.firstname.$setTouched();
+            $scope.contactForm.lastname.$setTouched();
+            $scope.contactForm.company.$setTouched();
+            $scope.contactForm.email.$setTouched();
+            $scope.contactForm.phone.$setTouched();
+            $scope.contactForm.message.$setTouched();
             return;
         }
-        $http.post("/send-message", formDetails)
+        $http.post("/send-message", $scope.formDetails)
             .success(function(response) {
-                console.log(response);
+                $scope.formDetails = {
+                    firstName: "",
+                    lastName: "",
+                    company: "",
+                    email: "",
+                    phone: "",
+                    message: ""
+                }
+                $scope.contactForm.$setPristine();
+                $scope.contactForm.$setUntouched();
+                showToast();
             })
             .error(function(error) {
-                console.log(error);
+                $scope.contactForm.firstname.$setTouched();
+                $scope.contactForm.lastname.$setTouched();
+                $scope.contactForm.company.$setTouched();
+                $scope.contactForm.email.$setTouched();
+                $scope.contactForm.phone.$setTouched();
+                $scope.contactForm.message.$setTouched();
             })
     };
+
+    function showToast() {
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent('Message sent!')
+            .position("top right")
+            .hideDelay(3000)
+        );
+
+    }
 }]);
