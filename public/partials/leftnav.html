@@ -3,7 +3,7 @@
     <md-toolbar class="transparent square">
         <span class="logo square"></span>
     </md-toolbar>
-    <md-divider></md-divider>
+
     <md-list ng-controller="LeftCtrl">
         <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/'}" ng-click="redirect('/')">
             <a>
@@ -41,14 +41,26 @@
                 </md-item-content>
             </a>
         </md-list-item>
-        <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/kit'}" ng-click="redirect('/kit')">
+        <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/bikes'}" ng-click="redirect('/bikes')">
             <a>
                 <md-item-content layout="row" layout-align="start center">
                     <div class="inset">
                         <md-icon>motorcycle</md-icon>
                     </div>
                     <div class="inset">
-                        <span class="md-subhead">bikes & kit</span>
+                        <span class="md-subhead">bikes</span>
+                    </div>
+                </md-item-content>
+            </a>
+        </md-list-item>
+        <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/car'}" ng-click="redirect('/car')">
+            <a href="/car">
+                <md-item-content layout="row" layout-align="start center">
+                    <div class="inset">
+                        <md-icon>directions_car</md-icon>
+                    </div>
+                    <div class="inset">
+                        <span class="md-subhead">car</span>
                     </div>
                 </md-item-content>
             </a>
@@ -82,7 +94,7 @@
 
 
     <div class="social-list">
-        <div class="social-item"><a title="instagram" class="insta" href="https://www.instagram.com/"></a></div>
+        <div class="social-item"><a title="instagram" class="insta" href="https://www.instagram.com/easternramblers/"></a></div>
         <div class="social-item"><a title="facebook" class="facebook" href="https://www.facebook.com/groups/1781457422075377"></a></div>
         <div class="social-item"><a title="twitter" class="twitter" href="https://www.twitter.com/"></a></div>
         <div class="social-item"><a title="youtube" class="youtube" href="https://www.youtube.com/"></a></div>

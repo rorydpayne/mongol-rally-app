@@ -7,7 +7,8 @@ GET     /                           controllers.Application.index()
 GET     /team                       controllers.Application.index()
 GET     /route                      controllers.Application.index()
 GET     /charity                    controllers.Application.index()
-GET     /kit                        controllers.Application.index()
+GET     /bikes                      controllers.Application.index()
+GET     /car                        controllers.Application.index()
 GET     /contact                    controllers.Application.index()
 
 # Resources

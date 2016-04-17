@@ -22,9 +22,11 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
                 templateUrl: '/assets/partials/charity.html',
                 controller: 'CharityCtrl'
             });
-            $routeProvider.when('/kit', {
-                templateUrl: '/assets/partials/kit.html',
-                controller: 'HomeCtrl'
+            $routeProvider.when('/bikes', {
+                templateUrl: '/assets/partials/bikes.html'
+            });
+            $routeProvider.when('/car', {
+                templateUrl: '/assets/partials/car.html'
             });
             $routeProvider.when('/contact', {
                 templateUrl: '/assets/partials/contact.html',

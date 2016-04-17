@@ -8,6 +8,7 @@ blogUiModule.controller('LeftCtrl', ['$scope', '$timeout', '$mdSidenav', '$log',
     };
 
     $scope.redirect = function(path) {
-        $location.path(path)
+        $location.path(path);
+        $scope.close();
     };
 }]);
