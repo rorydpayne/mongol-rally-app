@@ -1,12 +1,11 @@
 $theme-colors: (
-    'theme-primary': #00BCD4,
-    'theme-primary-dark': #0097A7,
-    'theme-primary-light': #B2EBF2,
-    'theme-text': #212121,
+    'theme-primary': #FF5722,
+    'theme-dark': #E64A19,
+    'theme-light': #FFCCBC,
+    'theme-text': #222831,
     'theme-white': #ffffff,
-    'theme-secondary-text': #727272,
-    'theme-divider': #B6B6B6,
-    'theme-accent': #ff4081
+    'theme-secondary-text': #393F46,
+    'theme-accent': #03A9F4
 );
 
 @function getThemeColor($name) {
@@ -15,3 +14,12 @@ $theme-colors: (
 	}
 	@return map-get($theme-colors, $name);
 }
+
+   //'theme-primary': #00BCD4,
+   //'theme-primary-dark': #0097A7,
+   //'theme-primary-light': #B2EBF2,
+   //'theme-text': #212121,
+   //'theme-white': #ffffff,
+   //'theme-secondary-text': #727272,
+   //'theme-divider': #B6B6B6,
+   //'theme-accent': #ff4081 */

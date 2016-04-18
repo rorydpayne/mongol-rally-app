@@ -2,7 +2,7 @@
     //background-image: url("/assets/images/jpg/sidenav_bg.jpg");
     //background-size: cover;
     //background-repeat: no-repeat;
-    background: #393F46;
+    background: getThemeColor('theme-secondary-text');
 
     span.logo {
         background-image: url("/assets/images/png/eastern_ramblers.png");
