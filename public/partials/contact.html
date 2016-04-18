@@ -7,7 +7,7 @@
         <form name="contactForm">
             <md-input-container class="md-block">
                 <label>First name *</label>
-                <md-icon>person</md-icon>
+                <md-icon class="md-primary">person</md-icon>
                 <input required  name="firstname" ng-model="formDetails.firstName" autofocus>
                 <div ng-messages="contactForm.firstname.$error">
                     <div ng-message="required">Tell us what we should call you</div>
@@ -15,7 +15,7 @@
             </md-input-container>
             <md-input-container class="md-block">
                 <label>Last name *</label>
-                <md-icon>person</md-icon>
+                <md-icon class="md-primary">person</md-icon>
                 <input required name="lastname" ng-model="formDetails.lastName">
                 <div ng-messages="contactForm.lastname.$error">
                     <div ng-message="required">Tell us what we should call you</div>
@@ -23,12 +23,12 @@
             </md-input-container>
             <md-input-container class="md-block">
                 <label>Company name</label>
-                <md-icon>person</md-icon>
+                <md-icon class="md-primary">person</md-icon>
                 <input name="company" ng-model="formDetails.company">
             </md-input-container>
             <md-input-container class="md-block">
                 <label>Email *</label>
-                <md-icon>email</md-icon>
+                <md-icon class="md-primary">email</md-icon>
                 <input required  name="email" ng-model="formDetails.email" ng-pattern="/^.+\@.+\..+/">
                 <div ng-messages="contactForm.email.$error">
                     <div ng-message="required">Tell us your email address so we can get back to you</div>
@@ -37,7 +37,7 @@
             </md-input-container>
             <md-input-container class="md-block">
                 <label>Telephone</label>
-                <md-icon>phone</md-icon>
+                <md-icon class="md-primary">phone</md-icon>
                 <input  name="phone" ng-model="formDetails.phone" ng-pattern="/^[0-9,x,+]*$/">
                 <div ng-messages="contactForm.phone.$error">
                     <div ng-message="pattern">Please enter a valid telephone number</div>
@@ -45,14 +45,14 @@
             </md-input-container>
             <md-input-container class="md-block md-icon-left">
                 <label>Message *</label>
-                <md-icon>message</md-icon>
+                <md-icon class="md-primary">message</md-icon>
                 <textarea required name="message" ng-model="formDetails.message"></textarea>
                 <div ng-messages="contactForm.message.$error">
                     <div ng-message="required">What would you like to tell us about?</div>
                 </div>
             </md-input-container>
             <div class="button-wrapper button-wrapper--center">
-                <md-button aria-label="Send" ng-href="#" ng-click="send(formDetails)" class="md-raised md-accent">Send</md-button>
+                <md-button aria-label="Send" ng-href="#" ng-click="send(formDetails)" class="md-raised md-primary">Send</md-button>
             </div>
         </form>
     </md-content>

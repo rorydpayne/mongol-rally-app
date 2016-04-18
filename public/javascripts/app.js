@@ -44,7 +44,7 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
     .config(['$mdThemingProvider', function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
             .primaryPalette('deep-orange')
-            .accentPalette('light-blue');
+            .accentPalette('indigo');
     }])
     .run(['$rootScope', '$location', function($rootScope, $location) {
         $rootScope.$on("$routeChangeStart", function(event, next, current) {

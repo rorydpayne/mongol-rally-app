@@ -29,38 +29,20 @@
         <script src='@routes.Assets.versioned("javascripts/blog/infrastructure/fundraiser-service.js")'></script>
 
     </head>
-    <body>
+    <body layout="column">
 
-    <div ng-controller="AppCtrl" layout="column" ng-cloak class="site-wrapper">
-        <section layout="row" flex>
+        <div ng-controller="AppCtrl" layout="row"> <!-- ng-cloak class="site-wrapper" -->
             <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ng-include="'/assets/partials/leftnav.html'">
             </md-sidenav>
-            <div layout="column" tabindex="-1" role="main" flex>
+            <div layout="row" flex>
                 <div ng-include="'/assets/partials/toolbar.html'"></div>
                 <md-content flex layout-padding>
                     <div ng-view></div>
                     <div flex></div>
                 </md-content>
+                <!--<div ng-include="'/assets/partials/rightnav.html'"></div>-->
             </div>
-            <div ng-include="'/assets/partials/rightnav.html'"></div>
-        </section>
-    </div>
-
-        <!--<div class="site-wrapper" ng-controller="AppCtrl">-->
-            <!--<section layout="row" flex>-->
-                <!--<div ng-include="'/assets/partials/leftnav.html'"></div>-->
-                <!--<div layout="column" tabindex="-1" role="main" flex>-->
-                    <!--<div ng-include="'/assets/partials/toolbar.html'"></div>-->
-                    <!--<section layout="row" flex>-->
-                        <!--<md-content flex layout-padding>-->
-                            <!--<div ng-view></div>-->
-                            <!--<div flex></div>-->
-                        <!--</md-content>-->
-                        <!--<div ng-include="'/assets/partials/rightnav.html'"></div>-->
-                    <!--</section>-->
-                <!--</div>-->
-            <!--</section>-->
-        <!--</div>-->
+        </div>
     </body>
 </html>
 
