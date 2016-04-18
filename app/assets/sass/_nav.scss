@@ -1,7 +1,8 @@
 .md-sidenav-left {
-    background-image: url("/assets/images/jpg/sidenav_bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    //background-image: url("/assets/images/jpg/sidenav_bg.jpg");
+    //background-size: cover;
+    //background-repeat: no-repeat;
+    background: #393F46;
 
     span.logo {
         background-image: url("/assets/images/png/eastern_ramblers.png");
@@ -17,13 +18,45 @@
         md-list-item.active {
             background: getThemeColor('theme-primary');
         }
+        md-list-item.expanded {
+            .md-button {
+                background-color: rgba(158,158,158,0.2);
+            }
+        }
         md-item-content, md-icon {
             color: getThemeColor('theme-white');
         }
         .icon-wrapper {
             margin-right: 10px;
         }
-        padding-bottom: 75px;
+
+        &.outer {
+            padding-bottom: 75px;
+        }
+        &.inner {
+        padding-top: 0;
+            md-list-item {
+                button {
+                    padding-left: 35px;
+                }
+            }
+        }
+        md-list-item {
+            min-height: 40px;
+            button {
+                min-height: 40px;
+                .md-list-item-inner {
+                    min-height: 40px;
+                }
+            }
+        }
+        .inset {
+            padding: 0 10px;
+            &.right {
+                width: 100%;
+                text-align: right;
+            }
+        }
     }
 
     .social-list {
@@ -58,6 +91,9 @@
                 }
                 &.youtube {
                     background-image: url('/assets/images/png/youtube.png');
+                }
+                &:hover {
+                    opacity: 0.4;
                 }
             }
         }

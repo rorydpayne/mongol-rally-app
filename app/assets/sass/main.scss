@@ -53,6 +53,10 @@ ul {
     }
 }
 
+.site-content {
+    max-width: 1280px;
+}
+
 @import "nav";
 @import "layout";
 @import "toolbar";
