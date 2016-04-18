@@ -8,6 +8,15 @@ html {
 
 body {
     height: 100%;
+    font-family: Lato, Roboto, "Helvetica Neue", sans-serif;
+}
+
+button, select, html, textarea, input {
+    font-family: Lato, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.md-button {
+    font-weight: bold;
 }
 
 .site-wrapper {
@@ -22,11 +31,11 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Liberator;
+    font-family: Liberator, Roboto, "Helvetica Neue", sans-serif;
 }
 
 .sub {
-    font-family: OutageCut;
+    font-family: OutageCut, Roboto, "Helvetica Neue", sans-serif;
     margin-bottom: 0;
 }
 
@@ -36,6 +45,12 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
+}
+
+ul {
+    &.list-style-none {
+        list-style: none;
+    }
 }
 
 @import "nav";
