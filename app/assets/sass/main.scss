@@ -1,5 +1,6 @@
 @import "color";
 @import "vars";
+@import "fonts";
 
 html {
     height: 100%;
@@ -16,7 +17,16 @@ body {
     }
 }
 
+p {
+    font-family: Lato;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Liberator;
+}
+
 .sub {
+    font-family: OutageCut;
     margin-bottom: 0;
 }
 
