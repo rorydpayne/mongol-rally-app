@@ -3,11 +3,7 @@ blogUiModule.controller("ContactCtrl", ['$scope', '$http', '$mdToast', function(
     $scope.formDetails = {};
 
     $scope.send = function() {
-        if ($scope.formDetails.firstName == null || $scope.formDetails.firstName == "" ||
-         $scope.formDetails.lastName == null || $scope.formDetails.lastName == "" ||
-         $scope.formDetails.email == null || $scope.formDetails.email == "" || !$scope.contactForm.match(/^.+\@.+\..+/) ||
-        $scope.formDetails.message == null || $scope.formDetails.message == "" ||
-        !$scope.contactFrom.phone.match(/^[0-9,x,+]*$/)) {
+        if ($scope.contactForm.$invalid) {
             $scope.contactForm.firstname.$setTouched();
             $scope.contactForm.lastname.$setTouched();
             $scope.contactForm.company.$setTouched();
