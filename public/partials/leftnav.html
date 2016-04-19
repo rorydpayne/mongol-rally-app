@@ -29,10 +29,10 @@
                     </div>
                 </md-item-content>
             </a>
-            <div class="inset right">
-                <md-icon ng-hide="showAboutSubList">keyboard_arrow_down</md-icon>
-                <md-icon ng-show="showAboutSubList">keyboard_arrow_up</md-icon>
-            </div>
+            <!--<div class="inset right">-->
+                <md-icon class="expand" ng-hide="showAboutSubList">keyboard_arrow_down</md-icon>
+                <md-icon class="expand" ng-show="showAboutSubList">keyboard_arrow_up</md-icon>
+            <!--</div>-->
         </md-list-item>
         <md-list class="inner" ng-show="showAboutSubList">
             <!--<md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/team'}" ng-click="redirect('/team')">-->
