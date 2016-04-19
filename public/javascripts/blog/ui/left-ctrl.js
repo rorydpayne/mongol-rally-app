@@ -8,6 +8,12 @@ blogUiModule.controller('LeftCtrl', ['$scope', '$timeout', '$mdSidenav', '$log',
         if ($location.path() == '/route' || $location.path() == '/car' || $location.path() == '/bikes')
             $scope.showAboutSubList = true;
     }
+
+    function closeSubListIfAtPath() {
+        if (!($location.path() == '/route' || $location.path() == '/car' || $location.path() == '/bikes'))
+            $scope.showAboutSubList = false;
+    }
+
     $scope.close = function () {
       $mdSidenav('left').close()
         .then(function () {
@@ -17,6 +23,7 @@ blogUiModule.controller('LeftCtrl', ['$scope', '$timeout', '$mdSidenav', '$log',
 
     $scope.redirect = function(path) {
         $location.path(path);
+//        closeSubListIfAtPath();
         $scope.close();
     };
 }]);

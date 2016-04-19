@@ -10,6 +10,7 @@ GET     /charity                    controllers.Application.index()
 GET     /bikes                      controllers.Application.index()
 GET     /car                        controllers.Application.index()
 GET     /contact                    controllers.Application.index()
+GET     /sponsors                   controllers.Application.index()
 
 # Resources
 GET     /fundraising                controllers.Application.getFundraisingSummary()

@@ -22,13 +22,17 @@ button, select, html, textarea, input {
 
 .site-wrapper {
     min-height: 100%;
-    >section {
-        height: 100%;
-    }
 }
 
 p {
     font-family: Lato;
+    a {
+        text-decoration: none;
+        color: getThemeColor('theme-primary');
+        &:hover {
+            color: getThemeColor('theme-light');
+        }
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {

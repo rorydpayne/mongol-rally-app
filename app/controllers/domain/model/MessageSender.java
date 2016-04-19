@@ -17,12 +17,20 @@ public class MessageSender {
     }
 
     private static final String RORY_EMAIL = "Rory Payne <rorydpayne@gmail.com>";
+    private static final String JEM_EMAIL = "Jeremy Ireland <jeremy_ireland10@hotmail.co.uk>";
+    private static final String PEDRO_EMAIL = "Peter McLoughlin <pete_mcloughlin@hotmail.co.uk>";
+    private static final String KATLYN_EMAIL = "Katlyn Green <katlynmgreen91@gmail.com>";
+    private static final String REUBEN_EMAIL = "Reuben Kettle Aiers <reubenkettle@gmail.com>";
     private static final String SUBJECT = "MONGOL RALLY";
 
     public void sendMessageHome(MessageRequest message) throws EmailException {
         Email email = new Email();
         email.setFrom(String.format("%s %s <%s>", message.getFirstName(), message.getLastName(), message.getEmail()));
         email.setSubject(SUBJECT);
+        email.addTo(JEM_EMAIL);
+        email.addTo(PEDRO_EMAIL);
+        email.addTo(KATLYN_EMAIL);
+        email.addTo(REUBEN_EMAIL);
         email.addTo(RORY_EMAIL);
 
         String body = String.format("First name: %s%n" +

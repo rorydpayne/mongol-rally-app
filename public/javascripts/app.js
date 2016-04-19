@@ -10,13 +10,11 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
                 templateUrl: '/assets/partials/home.html',
                 controller: 'HomeCtrl'
             });
-            $routeProvider.when('/team', {
-                templateUrl: '/assets/partials/home.html',
-                controller: 'HomeCtrl'
-            });
+//            $routeProvider.when('/team', {
+//                templateUrl: '/assets/partials/team.html'
+//            });
             $routeProvider.when('/route', {
-                templateUrl: '/assets/partials/route.html',
-                controller: 'HomeCtrl'
+                templateUrl: '/assets/partials/route.html'
             });
             $routeProvider.when('/charity', {
                 templateUrl: '/assets/partials/charity.html',
@@ -25,6 +23,9 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
             $routeProvider.when('/bikes', {
                 templateUrl: '/assets/partials/bikes.html'
             });
+            $routeProvider.when('/sponsors', {
+                templateUrl: '/assets/partials/sponsors.html'
+            });
             $routeProvider.when('/car', {
                 templateUrl: '/assets/partials/car.html'
             });
@@ -32,7 +33,6 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
                 templateUrl: '/assets/partials/contact.html',
                 controller: 'ContactCtrl'
             });
-
             $routeProvider.otherwise({
                 redirectTo: '/'
             });
