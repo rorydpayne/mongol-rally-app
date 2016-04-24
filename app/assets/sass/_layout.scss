@@ -13,6 +13,34 @@
     }
     &--home {
         background-image: url("/assets/images/jpg/home-top.jpg");
+        display: block;
+        position: relative;
+        img.logo {
+            width: 33%;
+            max-width: 500px;
+            margin: 50px auto;
+            display: block;
+            opacity: 0.9;
+        }
+        ul {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            @media only screen and (min-width: $media-xl) {
+                font-size: 40px;
+            }
+            @media only screen and (min-width: $media-lg) {
+                font-size: 36px;
+            }
+            @media only screen and (min-width: $media-md) {
+                font-size: 32px;
+            }
+            @media only screen and (min-width: $media-sm) {
+                font-size: 24px;
+            }
+        }
+
     }
     &--home, &--route {
         @media only screen and (min-width: $media-xl) {
@@ -93,6 +121,7 @@ img {
         max-width: 20%;
         &.figure--align-right {
             float: right;
+            margin-right: 0;
             img, figcaption {
                 float: right;
             }

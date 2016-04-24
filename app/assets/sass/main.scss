@@ -30,7 +30,7 @@ p {
         text-decoration: none;
         color: getThemeColor('theme-primary');
         &:hover {
-            color: getThemeColor('theme-light');
+            color: getThemeColor('theme-dark');
         }
     }
 }
@@ -42,6 +42,10 @@ h1, h2, h3, h4, h5, h6 {
 .sub {
     font-family: OutageCut, Roboto, "Helvetica Neue", sans-serif;
     margin-bottom: 0;
+}
+
+.center {
+    text-align: center;
 }
 
 .transparent {
@@ -60,6 +64,9 @@ ul {
 
 .site-content {
     max-width: 1280px;
+    &.margin {
+        margin-bottom: 80px;
+    }
 }
 
 @import "nav";
