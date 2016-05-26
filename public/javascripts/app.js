@@ -10,9 +10,9 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
                 templateUrl: '/assets/partials/home.html',
                 controller: 'HomeCtrl'
             });
-//            $routeProvider.when('/team', {
-//                templateUrl: '/assets/partials/team.html'
-//            });
+            $routeProvider.when('/team', {
+                templateUrl: '/assets/partials/team.html'
+            });
             $routeProvider.when('/route', {
                 templateUrl: '/assets/partials/route.html'
             });

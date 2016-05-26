@@ -9,7 +9,7 @@
 
     }
     &--route {
-        background-image: url("/assets/images/jpg/rally-route.jpg");
+        background-image: url("/assets/images/png/route.png");
     }
     &--home {
         background-image: url("/assets/images/jpg/home-top.jpg");
@@ -42,7 +42,7 @@
         }
 
     }
-    &--home, &--route {
+    &--home {
         @media only screen and (min-width: $media-xl) {
             height: 600px;
         }
@@ -54,6 +54,20 @@
         }
         @media only screen and (min-width: $media-sm) {
             height: 400px;
+        }
+    }
+    &--route {
+        @media only screen and (min-width: $media-xl) {
+            height: 500px;
+        }
+        @media only screen and (min-width: $media-lg) {
+            height: 400px;
+        }
+        @media only screen and (min-width: $media-md) {
+            height: 300px;
+        }
+        @media only screen and (min-width: $media-sm) {
+            height: 300px;
         }
     }
     &--charity {

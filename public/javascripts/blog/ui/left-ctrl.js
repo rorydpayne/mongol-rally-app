@@ -4,14 +4,21 @@ blogUiModule.controller('LeftCtrl', ['$scope', '$timeout', '$mdSidenav', '$log',
 
     openSubListIfAtPath();
 
+
+
     function openSubListIfAtPath() {
-        if ($location.path() == '/route' || $location.path() == '/car' || $location.path() == '/bikes')
+        if (isAtAboutPath())
             $scope.showAboutSubList = true;
     }
 
     function closeSubListIfAtPath() {
-        if (!($location.path() == '/route' || $location.path() == '/car' || $location.path() == '/bikes'))
+        if (!isAtAboutPath())
             $scope.showAboutSubList = false;
+    }
+
+    function isAtAboutPath() {
+        var paths = ['/route', '/car', '/bikes', '/team'];
+        return paths.indexOf($location.path()) != -1;
     }
 
     $scope.close = function () {
