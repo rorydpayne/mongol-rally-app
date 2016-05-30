@@ -164,3 +164,12 @@ img {
         }
     }
 }
+
+.sponsorship-package {
+    h1, h3 {
+        margin-bottom: 0;
+    }
+    &--column {
+        padding-right: 80px;
+    }
+}

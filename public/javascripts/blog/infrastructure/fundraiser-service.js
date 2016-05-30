@@ -1,10 +1,21 @@
 blogInfrastructureModule.service("fundraiserService", ['$http', function($http) {
 
-    function getFundraiserSummary(onSuccess) {
-        return $http.get('fundraising', null);
+    var instance = new FundraiserService();
+
+    function FundraiserService() {
     }
 
-    return {
-        getFundraiserSummary: getFundraiserSummary
-    }
+    FundraiserService.prototype.getFundraiserSummary = function(onSuccess, onError) {
+        $http.get('fundraising', null).then(function(response) {
+            onSuccess(response.data)
+        }, onError);
+    };
+
+    FundraiserService.prototype.getSponsorshipPdf = function(onSuccess, onError) {
+        $http.get('sponsorship', null).then(function(response) {
+            onSuccess(response.data)
+        }, onError);
+    };
+
+    return instance;
 }])
