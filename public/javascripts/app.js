@@ -26,9 +26,8 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
             $routeProvider.when('/sponsors', {
                 templateUrl: '/assets/partials/sponsors.html'
             });
-            $routeProvider.when('/sponsorship', {
-                templateUrl: '/assets/partials/sponsorship-packages.html',
-                controller: 'SponsorsCtrl'
+            $routeProvider.when('/sponsorship-packages', {
+                templateUrl: '/assets/partials/sponsorship-packages.html'
             });
             $routeProvider.when('/car', {
                 templateUrl: '/assets/partials/car.html'

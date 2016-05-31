@@ -11,7 +11,7 @@ GET     /bikes                      controllers.Application.index()
 GET     /car                        controllers.Application.index()
 GET     /contact                    controllers.Application.index()
 GET     /sponsors                   controllers.Application.index()
-GET     /sponsorship                controllers.Application.index()
+GET     /sponsorship-packages       controllers.Application.index()
 
 # Resources
 GET     /fundraising                controllers.Application.getFundraisingSummary()
