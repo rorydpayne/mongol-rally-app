@@ -12,6 +12,10 @@ import play.mvc.*;
 import views.html.*;
 
 import javax.inject.Inject;
+import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 public class Application extends Controller {
 
@@ -27,6 +31,15 @@ public class Application extends Controller {
 
     public F.Promise<Result> getFundraisingSummary() {
         return fundraisingService.retrieveFundraisingSummary().map(Results::ok);
+    }
+
+    public Result getSponsorshipPdf() {
+        URL fileUrl = this.getClass().getResource("/public/files/eastern-ramblers.pdf");
+        try {
+            return ok(new File(fileUrl.toURI()));
+        } catch (URISyntaxException e) {
+            return internalServerError();
+        }
     }
 
     public Result sendMessage() {

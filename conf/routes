@@ -11,10 +11,12 @@ GET     /bikes                      controllers.Application.index()
 GET     /car                        controllers.Application.index()
 GET     /contact                    controllers.Application.index()
 GET     /sponsors                   controllers.Application.index()
+GET     /sponsorship-packages       controllers.Application.index()
 
 # Resources
-                                                                         GET     /fundraising                controllers.Application.getFundraisingSummary()
-                                                                         POST    /send-message               controllers.Application.sendMessage()
+GET     /fundraising                controllers.Application.getFundraisingSummary()
+POST    /send-message               controllers.Application.sendMessage()
+GET     /sponsorship                controllers.Application.getSponsorshipPdf()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

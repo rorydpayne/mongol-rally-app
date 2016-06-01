@@ -10,9 +10,9 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
                 templateUrl: '/assets/partials/home.html',
                 controller: 'HomeCtrl'
             });
-//            $routeProvider.when('/team', {
-//                templateUrl: '/assets/partials/team.html'
-//            });
+            $routeProvider.when('/team', {
+                templateUrl: '/assets/partials/team.html'
+            });
             $routeProvider.when('/route', {
                 templateUrl: '/assets/partials/route.html'
             });
@@ -25,6 +25,9 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
             });
             $routeProvider.when('/sponsors', {
                 templateUrl: '/assets/partials/sponsors.html'
+            });
+            $routeProvider.when('/sponsorship-packages', {
+                templateUrl: '/assets/partials/sponsorship-packages.html'
             });
             $routeProvider.when('/car', {
                 templateUrl: '/assets/partials/car.html'
