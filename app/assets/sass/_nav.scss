@@ -10,8 +10,13 @@
     //background-repeat: no-repeat;
     background: getThemeColor('theme-secondary-text');
 
+    img.emblem {
+        width: 70%;
+        margin-left: 15%;
+    }
+
     span.logo {
-        background-image: url("/assets/images/png/eastern_ramblers.png");
+        background-image: url("/assets/images/png/emblem.png");
         background-size: 100%;
         background-repeat: no-repeat;
         display: block;
