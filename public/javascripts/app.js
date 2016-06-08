@@ -45,9 +45,54 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
 
         }])
     .config(['$mdThemingProvider', function($mdThemingProvider) {
-        $mdThemingProvider.theme('default')
-            .primaryPalette('deep-orange')
-            .accentPalette('indigo');
+        $mdThemingProvider.definePalette('primary', {
+            '50': 'FFFFFF',
+            '100': 'E8F5E1',
+            '200': 'C8E7B7',
+            '300': 'A0D482',
+            '400': '8ECD6B',
+            '500': '7DC554',
+            '600': '6CBB3F',
+            '700': '5FA438',
+            '800': '528D30',
+            '900': '457628',
+            'A100': 'FFFFFF',
+            'A200': 'E8F5E1',
+            'A400': '8ECD6B',
+            'A700': '5FA438',
+            'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+                                                // on this palette should be dark or light
+            'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
+             '200', '300', '400', 'A100'],
+            'contrastLightColors': undefined    // could also specify this if default was 'dark'
+          });
+          $mdThemingProvider.definePalette('accent', {
+              '50': 'FFFFFF',
+              '100': 'FEECE2',
+              '200': 'FDC7AB',
+              '300': 'FC9865',
+              '400': 'FC8447',
+              '500': 'FB7029',
+              '600': 'FA5C0B',
+              '700': 'E34F04',
+              '800': 'C54504',
+              '900': 'A63A03',
+              'A100': 'FFFFFF',
+              'A200': 'FEECE2',
+              'A400': 'FC8447',
+              'A700': 'E34F04',
+              'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+                                                  // on this palette should be dark or light
+              'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
+               '200', '300', '400', 'A100'],
+              'contrastLightColors': undefined    // could also specify this if default was 'dark'
+            });
+             $mdThemingProvider.theme('default')
+                .primaryPalette('primary')
+                .accentPalette('accent')
+                .warnPalette('accent')
+                .dark();
+
     }])
     .run(['$rootScope', '$location', function($rootScope, $location) {
         $rootScope.$on("$routeChangeStart", function(event, next, current) {

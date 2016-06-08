@@ -1,11 +1,13 @@
 $theme-colors: (
-    'theme-primary': #FF5722,
-    'theme-dark': #E64A19,
-    'theme-light': #FFCCBC,
-    'theme-text': #222831,
+    'theme-primary': #7dc554,
+    'theme-dark': #5FA438,
+    'theme-light': #8ECD6B,
+    'theme-text': #EEEEEE,
     'theme-white': #ffffff,
-    'theme-secondary-text': #37474F,
-    'theme-accent': #03A9F4
+    'theme-secondary-text': #B1B1B1,
+    'theme-accent': #03A9F4,
+    'theme-grey': #393F46,
+    'theme-grey-dark': #222831
 );
 
 @function getThemeColor($name) {

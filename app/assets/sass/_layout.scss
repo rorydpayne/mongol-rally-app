@@ -26,60 +26,60 @@
 
     }
     &--home {
-        @media only screen and (min-width: $media-xl) {
-            height: 600px;
+        @media only screen and (max-width: $media-xl) {
+            height: 550px;
         }
-        @media only screen and (min-width: $media-lg) {
-            height: 500px;
+        @media only screen and (max-width: $media-lg) {
+            height: 450px;
         }
-        @media only screen and (min-width: $media-md) {
+        @media only screen and (max-width: $media-md) {
             height: 400px;
         }
-        @media only screen and (min-width: $media-sm) {
+        @media only screen and (max-width: $media-sm) {
             height: 400px;
         }
     }
     &--route {
-        @media only screen and (min-width: $media-xl) {
+        @media only screen and (max-width: $media-xl) {
             height: 500px;
         }
-        @media only screen and (min-width: $media-lg) {
+        @media only screen and (max-width: $media-lg) {
             height: 400px;
         }
-        @media only screen and (min-width: $media-md) {
+        @media only screen and (max-width: $media-md) {
             height: 300px;
         }
-        @media only screen and (min-width: $media-sm) {
+        @media only screen and (max-width: $media-sm) {
             height: 300px;
         }
     }
     &--charity {
-        @media only screen and (min-width: $media-xl) {
+        @media only screen and (max-width: $media-xl) {
             height: 700px;
         }
-        @media only screen and (min-width: $media-lg) {
+        @media only screen and (max-width: $media-lg) {
             height: 600px;
         }
-        @media only screen and (min-width: $media-md) {
+        @media only screen and (max-width: $media-md) {
             height: 500px;
         }
-        @media only screen and (min-width: $media-sm) {
+        @media only screen and (max-width: $media-sm) {
             height: 500px;
         }
     }
     &--team {
         background-image: url("/assets/images/jpg/team.jpg");
         background-position: top;
-        @media only screen and (min-width: $media-xl) {
+        @media only screen and (max-width: $media-xl) {
                 height: 900px;
             }
-            @media only screen and (min-width: $media-lg) {
+            @media only screen and (max-width: $media-lg) {
                 height: 800px;
             }
-            @media only screen and (min-width: $media-md) {
+            @media only screen and (max-width: $media-md) {
                 height: 700px;
             }
-            @media only screen and (min-width: $media-sm) {
+            @media only screen and (max-width: $media-sm) {
                 height: 700px;
             }
     }
@@ -187,37 +187,18 @@ img {
     background: -moz-linear-gradient(top, rgba(55, 71, 79,0), rgba(55, 71, 79,1)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to top, rgba(55, 71, 79,0), rgba(55, 71, 79,1)); /* Standard syntax (must be last) */
     img {
-        max-height: 50%;
+        max-height: 70%;
     }
-    @media only screen and (min-width: $media-xl) {
-        height: 600px;
+    @media only screen and (max-width: $media-xl) {
+        height: 550px;
     }
-    @media only screen and (min-width: $media-lg) {
-        height: 500px;
+    @media only screen and (max-width: $media-lg) {
+        height: 450px;
     }
-    @media only screen and (min-width: $media-md) {
+    @media only screen and (max-width: $media-md) {
         height: 400px;
     }
-    @media only screen and (min-width: $media-sm) {
+    @media only screen and (max-width: $media-sm) {
         height: 400px;
-    }
-    ul {
-        position: absolute;
-        text-align: left;
-        bottom: 20px;
-        left: 0;
-        color: #fff;
-        @media only screen and (min-width: $media-xl) {
-            font-size: 40px;
-        }
-        @media only screen and (min-width: $media-lg) {
-            font-size: 36px;
-        }
-        @media only screen and (min-width: $media-md) {
-            font-size: 32px;
-        }
-        @media only screen and (min-width: $media-sm) {
-            font-size: 24px;
-        }
     }
 }

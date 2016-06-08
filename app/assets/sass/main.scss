@@ -10,10 +10,22 @@ html {
 body {
     height: 100%;
     font-family: Lato, Roboto, "Helvetica Neue", sans-serif;
+    background-color: getThemeColor('theme-grey');
+    color: #fff;
 }
 
 button, select, html, textarea, input {
     font-family: Lato, Roboto, "Helvetica Neue", sans-serif;
+}
+
+input, textarea {
+    color: getThemeColor('theme-text');
+}
+
+
+md-input-container.md-default-theme label,
+ md-input-container.md-default-theme .md-placeholder{
+    color: getThemeColor('theme-secondary-text') !important;
 }
 
 .md-button {
@@ -33,6 +45,25 @@ p {
             color: getThemeColor('theme-dark');
         }
     }
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+h2 {
+    font-size: 2.4rem;
+}
+h3 {
+    font-size: 1.9rem;
+}
+h4 {
+    font-size: 1.6rem;
+}
+h5 {
+    font-size: 1.4rem;
+}
+h6 {
+    font-size: 1.3rem;
 }
 
 .theme-text {
@@ -68,6 +99,7 @@ ul {
 
 .site-content {
     max-width: 1280px;
+    margin: 0 auto;
     &.margin {
         margin-bottom: 80px;
     }
@@ -79,6 +111,15 @@ span.helper {
         &--bottom {
             vertical-align: bottom;
         }
+}
+
+.flex, md-content {
+    background: getThemeColor('theme-grey');
+    color: getThemeColor('theme-text');
+}
+
+.center-text {
+    text-align: center;
 }
 
 @import "nav";
