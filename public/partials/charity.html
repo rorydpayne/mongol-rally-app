@@ -1,94 +1,113 @@
 <section layout="column" class="site-content">
-    <h1>Charity</h1>
+    <h1 class="theme-text">Charity</h1>
     <p>We are using the rally to help us raise money for 5 different charities: Cool Earth, Mind, Dementia UK,
         British Heart Foundation and Rowcroft Hospice. We’ve chosen these charities because we believe the work
         they do is incredible. We aim to raise £2,000 per charity and hope to run multiple fundraisers over the
         coming months – 100% of these fundraisers will go directly to the charities.</p>
+    <md-content layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="50" layout="column">
+            <md-card>
+                <img ng-src="/assets/images/png/coolearth.png" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline sub">Cool Earth</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p>
+                        Cool Earth is a UK-based international NGO that protects endangered rainforests in order to combat
+                        global warming, protect ecosystems and to provide employment for local people. It works alongside
+                        indigenous villages to halt rainforest destruction. All Cool Earth partnerships are community owned and led.
+                    </p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button target="_blank" ng-href="{{coolEarthWebUrl}}">Learn More</md-button>
+                    <md-button target="_blank" ng-href="{{coolEarthDonateUrl}}">Donate</md-button>
+                </md-card-actions>
+            </md-card>
+            <md-card>
+                <img ng-src="/assets/images/png/mind.png" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline sub">Mind</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p>
+                        Mind offers information and advice to people with mental health problems, and lobbies government and local
+                        authorities on their behalf. It also works to raise public awareness and understanding of issues relating to
+                        mental health.
+                    </p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button target="_blank" ng-href="{{mindWebUrl}}">Learn More</md-button>
+                    <md-button target="_blank" ng-href="{{mindDonateUrl}}">Donate</md-button>
+                </md-card-actions>
+            </md-card>
+            <md-card>
+                <img ng-src="/assets/images/png/dementia.png" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline sub">Dementia UK</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p>
+                        Dementia UK provides support and guidance to those suffering from dementia – it helps them to live more
+                        positively and face the challenges it brings. Reuben's connection to this charity is particularly
+                        personal as his grandparents have suffered from this disease.
+                    </p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button target="_blank" ng-href="{{dementiaWebUrl}}">Learn More</md-button>
+                    <md-button target="_blank" ng-href="{{dementiaDonateUrl}}">Donate</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+        <div flex-xs flex-gt-xs="50" layout="column">
+            <md-card>
+                <img ng-src="/assets/images/png/bhf.png" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline sub">British Heart Foundation</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p>
+                        The British Heart Foundation funds research, education, care and awareness campaigns aimed to
+                        prevent heart diseases in humans. Coronary heart disease is the UK’s biggest killer and Pete’s
+                        granddad was sadly lost to a heart attack.
+                    </p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button target="_blank" ng-href="{{bhfWebUrl}}">Learn More</md-button>
+                    <md-button target="_blank" ng-href="{{bhfDonateUrl}}">Donate</md-button>
+                </md-card-actions>
+            </md-card>
+            <md-card>
+                <img ng-src="/assets/images/png/rowcroft-white.png" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline sub">Rowcroft Hospice</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p>
+                        Rowcroft Hospice is a wonderful Devon charity that provides care for 2,200 people each year. Jeremy's
+                        mum spent her final few weeks with Rowcroft - they're a fantastic organisation that make a massive
+                        difference to so many.
+                    </p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button target="_blank" ng-href="{{rowcroftWebUrl}}">Learn More</md-button>
+                    <md-button target="_blank" ng-href="{{rowcroftDonateUrl}}">Donate</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </md-content>
 
 
-    <!--<div class="row">-->
-        <!--<span class="flex"><img src="/assets/images/png/coolearth.png"></span>-->
-        <!--<span class="flex"><img src="/assets/images/jpg/mind.jpg"></span>-->
-        <!--<span class="flex"><img src="/assets/images/jpg/dementia-uk.jpg"></span>-->
-        <!--<span class="flex"><img src="/assets/images/png/bhf.png"></span>-->
-        <!--<span class="flex"><img src="/assets/images/jpg/rowcroft-logo.jpg"></span>-->
-    <!--</div>-->
-
-    <div layout="row">
-        <div flex="20" class="image-container image-container--center">
-            <img src="/assets/images/png/coolearth.png">
-        </div>
-        <div flex>
-            <h5 class="sub">Cool Earth</h5>
-            <p>Cool Earth is a UK-based international NGO that protects endangered rainforests in order to combat
-                global warming, protect ecosystems and to provide employment for local people. It works alongside
-                indigenous villages to halt rainforest destruction. All Cool Earth partnerships are community owned and led.</p>
-            <div class="button-wrapper">
-                <md-button aria-label="donate to cool earth" target="_blank" ng-href="{{coolEarthUrl}}" class="md-raised md-primary">donate <md-icon>arrow_forward</md-icon></md-button>
-            </div>
-        </div>
-    </div>
-    <div layout="row">
-        <div flex="20" class="image-container image-container--center">
-            <img src="/assets/images/jpg/mind.jpg">
-        </div>
-        <div flex>
-            <h5 class="sub">Mind</h5>
-            <p>Mind offers information and advice to people with mental health problems, and lobbies government and local
-                authorities on their behalf. It also works to raise public awareness and understanding of issues relating to
-                mental health.</p>
-            <div class="button-wrapper">
-                <md-button aria-label="mind website" target="_blank" ng-href="{{mindUrl}}" class="md-raised md-primary">learn more <md-icon>arrow_forward</md-icon></md-button>
-            </div>
-        </div>
-    </div>
-
-    <div layout="row">
-        <div flex="20" class="image-container image-container--center">
-            <img src="/assets/images/jpg/dementia-uk.jpg">
-        </div>
-        <div flex>
-            <h5 class="sub">Dementia UK</h5>
-            <p>Dementia UK provides support and guidance to those suffering from dementia – it helps them to live more
-                positively and face the challenges it brings. Reuben's connection to this charity is particularly personal
-                as Dementia UK have directly helped his grandparents who suffer from this disease.</p>
-            <div class="button-wrapper">
-                <md-button aria-label="dementia uk website" target="_blank" ng-href="{{dementiaUrl}}" class="md-raised md-primary">learn more <md-icon>arrow_forward</md-icon></md-button>
-            </div>
-        </div>
-    </div>
-
-    <div layout="row">
-        <div flex="20" class="image-container image-container--center">
-            <img src="/assets/images/png/bhf.png">
-        </div>
-        <div flex>
-            <h5 class="sub">British Heart Foundation</h5>
-            <p>The British Heart Foundation funds research, education, care and awareness campaigns aimed to
-                prevent heart diseases in humans. Coronary heart disease is the UK’s biggest killer and Pete’s
-                granddad was sadly lost to a heart attack.</p>
-            <div class="button-wrapper">
-                <md-button aria-label="bhf website" target="_blank" ng-href="{{bhfUrl}}" class="md-raised md-primary">learn more <md-icon>arrow_forward</md-icon></md-button>
-            </div>
-        </div>
-    </div>
-
-    <div layout="row">
-        <div flex="20" class="image-container image-container--center">
-            <img src="/assets/images/jpg/rowcroft-logo.jpg">
-        </div>
-        <div flex>
-            <h5 class="sub">Rowcroft Hospice</h5>
-            <p>Rowcroft Hospice is a wonderful Devon charity that provides care for 2,200 people each year. Jeremy's
-                mum spent her final few weeks with Rowcroft - they're a fantastic organisation that make a massive
-                difference to so many.</p>
-            <div class="button-wrapper">
-                <md-button aria-label="Donate to Rowcroft Hospice" target="_blank" ng-href="{{virginGivingUrl}}"  class="md-raised md-primary">donate <md-icon>arrow_forward</md-icon></md-button>
-            </div>
-        </div>
-    </div>
 </section>
-
 
 
 

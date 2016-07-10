@@ -3,6 +3,7 @@ package controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import controllers.domain.model.MessageRequest;
 import controllers.domain.model.MessageSender;
+import controllers.infrastructure.BloggerService;
 import controllers.infrastructure.VirginGivingWebService;
 import org.apache.commons.mail.EmailException;
 import play.libs.F;
@@ -21,6 +22,9 @@ public class Application extends Controller {
 
     @Inject
     MessageSender messageSender;
+
+    @Inject
+    BloggerService bloggerService;
 
     @Inject
     static VirginGivingWebService fundraisingService;
@@ -56,6 +60,10 @@ public class Application extends Controller {
             return internalServerError(e.getMessage());
         }
         return ok("form received");
+    }
+
+    public F.Promise<Result> getBlogSummaries() {
+        return bloggerService.retrieveBlogPosts().map(Results::ok);
     }
 
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessages', 'blog'])
+angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessages', 'blog', 'moment-module'])
     .config(['$routeProvider', '$httpProvider', '$locationProvider',
         function($routeProvider, $httpProvider, $locationProvider) {
             $httpProvider.defaults.useXDomain = true;
@@ -13,28 +13,20 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
             $routeProvider.when('/team', {
                 templateUrl: '/assets/partials/team.html'
             });
-            $routeProvider.when('/route', {
-                templateUrl: '/assets/partials/route.html'
-            });
             $routeProvider.when('/charity', {
                 templateUrl: '/assets/partials/charity.html',
                 controller: 'CharityCtrl'
             });
-            $routeProvider.when('/bikes', {
-                templateUrl: '/assets/partials/bikes.html'
-            });
             $routeProvider.when('/sponsors', {
                 templateUrl: '/assets/partials/sponsors.html'
-            });
-            $routeProvider.when('/sponsorship-packages', {
-                templateUrl: '/assets/partials/sponsorship-packages.html'
-            });
-            $routeProvider.when('/car', {
-                templateUrl: '/assets/partials/car.html'
             });
             $routeProvider.when('/contact', {
                 templateUrl: '/assets/partials/contact.html',
                 controller: 'ContactCtrl'
+            });
+            $routeProvider.when('/blog', {
+                templateUrl: '/assets/partials/blog.html',
+                controller: 'BlogCtrl'
             });
             $routeProvider.otherwise({
                 redirectTo: '/'
@@ -97,6 +89,7 @@ angular.module('app', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessag
     .run(['$rootScope', '$location', function($rootScope, $location) {
         $rootScope.$on("$routeChangeStart", function(event, next, current) {
             $rootScope.currentPath = $location.path();
+
         });
     }]);
 
@@ -105,3 +98,4 @@ var blogAppModule = angular.module('blogApp', []);
 var blogInfrastructureModule = angular.module('blogInfrastructure', []);
 var blogUiModule = angular.module('blogUi', []);
 var blogModule = angular.module('blog', ['blogDomain', 'blogApp', 'blogInfrastructure', 'blogUi']);
+var momentModule = angular.module('moment-module', []).factory('moment', function($window) { return $window.moment; });

@@ -18,73 +18,19 @@
                 </md-item-content>
             </a>
         </md-list-item>
-
-        <md-list-item md-ink-ripple class="md-clickable" ng-class="{expanded: showAboutSubList}" ng-click="showAboutSubList = !showAboutSubList">
+        <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/team'}" ng-click="redirect('/team')">
             <a>
                 <md-item-content layout="row" layout-align="start center">
                     <div class="inset">
-                        <md-icon>info</md-icon>
+                        <md-icon>group</md-icon>
                     </div>
                     <div class="inset">
-                        <span class="md-subhead">about</span>
+                        <span class="md-subhead">team</span>
                     </div>
                 </md-item-content>
             </a>
-            <!--<div class="inset right">-->
-                <md-icon class="expand" ng-hide="showAboutSubList">keyboard_arrow_down</md-icon>
-                <md-icon class="expand" ng-show="showAboutSubList">keyboard_arrow_up</md-icon>
-            <!--</div>-->
         </md-list-item>
-        <md-list class="inner" ng-show="showAboutSubList">
-            <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/team'}" ng-click="redirect('/team')">
-                <a>
-                    <md-item-content layout="row" layout-align="start center">
-                        <div class="inset">
-                            <md-icon>group</md-icon>
-                        </div>
-                        <div class="inset">
-                            <span class="md-subhead">team</span>
-                        </div>
-                    </md-item-content>
-                </a>
-            </md-list-item>
-            <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/route'}" ng-click="redirect('/route')">
-                <a>
-                    <md-item-content layout="row" layout-align="start center">
-                        <div class="inset">
-                            <md-icon>map</md-icon>
-                        </div>
-                        <div class="inset">
-                            <span class="md-subhead">route</span>
-                        </div>
-                    </md-item-content>
-                </a>
-            </md-list-item>
-            <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/bikes'}" ng-click="redirect('/bikes')">
-                <a>
-                    <md-item-content layout="row" layout-align="start center">
-                        <div class="inset">
-                            <md-icon>motorcycle</md-icon>
-                        </div>
-                        <div class="inset">
-                            <span class="md-subhead">bikes</span>
-                        </div>
-                    </md-item-content>
-                </a>
-            </md-list-item>
-            <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/car'}" ng-click="redirect('/car')">
-                <a href="/car">
-                    <md-item-content layout="row" layout-align="start center">
-                        <div class="inset">
-                            <md-icon>directions_car</md-icon>
-                        </div>
-                        <div class="inset">
-                            <span class="md-subhead">car</span>
-                        </div>
-                    </md-item-content>
-                </a>
-            </md-list-item>
-        </md-list>
+
         <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/charity'}" ng-click="redirect('/charity')">
             <a>
                 <md-item-content layout="row" layout-align="start center">
@@ -117,6 +63,18 @@
                     </div>
                     <div class="inset">
                         <span class="md-subhead">contact</span>
+                    </div>
+                </md-item-content>
+            </a>
+        </md-list-item>
+        <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/blog'}" ng-click="redirect('/blog')">
+            <a>
+                <md-item-content layout="row" layout-align="start center">
+                    <div class="inset">
+                        <md-icon>textsms</md-icon>
+                    </div>
+                    <div class="inset">
+                        <span class="md-subhead">blog</span>
                     </div>
                 </md-item-content>
             </a>

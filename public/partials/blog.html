@@ -1,0 +1,28 @@
+<section layout="column" class="site-content">
+    <h1 class="theme-text">Blog</h1>
+
+    <md-content layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="75" layout="column">
+            <h3 class="sub">{{activePost == null ? "" : activePost.title}}</h3>
+            <h4>{{getActivePostDate()}}</h4>
+            <div ng-bind-html="getHtml()"></div>
+        </div>
+        <div flex-xs flex-gt-xs="25" layout="column">
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline sub">Posts</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+
+                    <ul>
+                        <li ng-repeat="post in blogposts">
+                            <a href="#" ng-click="selectPost(post.id)">{{post.title}}</a>
+                        </li>
+                    </ul>
+                </md-card-content>
+            </md-card>
+        </div>
+    </md-content>
+</section>

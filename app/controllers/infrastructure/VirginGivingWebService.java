@@ -8,12 +8,8 @@ import play.libs.ws.WSRequest;
 import play.libs.ws.WSResponse;
 
 import javax.inject.Inject;
-import java.util.concurrent.CompletionStage;
 
 
-/**
- * Created by rorypayne on 03/04/2016.
- */
 public class VirginGivingWebService {
 
     private static final String API_KEY = "";

@@ -38,12 +38,12 @@ md-input-container.md-default-theme label,
 
 p {
     font-family: Lato;
-    a {
-        text-decoration: none;
-        color: getThemeColor('theme-primary');
-        &:hover {
-            color: getThemeColor('theme-dark');
-        }
+}
+a {
+    text-decoration: none;
+    color: getThemeColor('theme-primary');
+    &:hover {
+        color: getThemeColor('theme-dark');
     }
 }
 
@@ -72,6 +72,9 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Liberator, Roboto, "Helvetica Neue", sans-serif;
+    &.no-bottom-margin {
+        margin-bottom: 0;
+    }
 }
 
 .sub {
@@ -120,6 +123,10 @@ span.helper {
 
 .center-text {
     text-align: center;
+}
+
+md-card {
+    background:getThemeColor('theme-grey-light');
 }
 
 @import "nav";

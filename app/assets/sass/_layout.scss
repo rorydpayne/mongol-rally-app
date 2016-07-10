@@ -92,6 +92,7 @@ img {
 .image-container {
     padding: 20px;
     &--center {
+        display: -webkit-flex;
         display: flex;
         align-items: center;
     }
