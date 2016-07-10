@@ -38,7 +38,7 @@ blogUiModule.controller('BlogCtrl', ['$scope', '$http', '$sce', 'moment', functi
             return null;
 
 
-        return $sce.trustAsHtml($scope.activePost.content.replaceAll("open sans&quot; , &quot;arial&quot; , sans-serif;", "font-family: Lato, Roboto, &quot;Helvetica Neue&quot; , sans-serif;"));
+        return $sce.trustAsHtml($scope.activePost.content.replaceAll("&quot;open sans&quot; , &quot;arial&quot; , sans-serif;", "Lato, Roboto, &quot;Helvetica Neue&quot;, sans-serif;"));
     };
 
     $scope.getActivePostDate = function() {
