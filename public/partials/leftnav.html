@@ -55,18 +55,6 @@
                 </md-item-content>
             </a>
         </md-list-item>
-        <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/contact'}" ng-click="redirect('/contact')">
-            <a>
-                <md-item-content layout="row" layout-align="start center">
-                    <div class="inset">
-                        <md-icon>message</md-icon>
-                    </div>
-                    <div class="inset">
-                        <span class="md-subhead">contact</span>
-                    </div>
-                </md-item-content>
-            </a>
-        </md-list-item>
         <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/blog'}" ng-click="redirect('/blog')">
             <a>
                 <md-item-content layout="row" layout-align="start center">
@@ -75,6 +63,18 @@
                     </div>
                     <div class="inset">
                         <span class="md-subhead">blog</span>
+                    </div>
+                </md-item-content>
+            </a>
+        </md-list-item>
+        <md-list-item md-ink-ripple class="md-clickable" ng-class="{active: currentPath == '/contact'}" ng-click="redirect('/contact')">
+            <a>
+                <md-item-content layout="row" layout-align="start center">
+                    <div class="inset">
+                        <md-icon>message</md-icon>
+                    </div>
+                    <div class="inset">
+                        <span class="md-subhead">contact</span>
                     </div>
                 </md-item-content>
             </a>
